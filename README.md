@@ -1,1 +1,1 @@
-# udacity_show_me_the_data_structures
+# udacity-Show-Me-the-Data-Structures
