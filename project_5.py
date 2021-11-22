@@ -49,6 +49,7 @@ class Blockchain:
                 current = current.next
                 index += 1
 
+#test 1
 
 bc = Blockchain()
 bc.print_bc()
@@ -59,7 +60,11 @@ bc.add_block("data 3")
 bc.print_bc()
 
 
-
+#test 2
+bc = Blockchain()
+bc.add_block("data 1")
+bc.add_block("data 1")
+bc.print_bc()
 
 
 
