@@ -32,12 +32,15 @@ def find_files(suffix = "", path = "."):
 #test 1
 print("\n Test 1")
 print(find_files('', './testdir')) #Empty input should return empty list
+#[]
 
 #test 2
 print("\n Test 2")
 print(find_files('.c', './test'))  #should return empty list as the /test folder does not exist
+#[]
 
 #test 3
 print("\n Test 3")
-print(find_files('.c', './testdir')) #should return all the files with .c ['./testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c', './testdir/subdir5/a.c', './testdir/t1.c']
+print(find_files('.c', './testdir')) #should return all the files with .c 
+#['./testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c', './testdir/subdir5/a.c', './testdir/t1.c']
 

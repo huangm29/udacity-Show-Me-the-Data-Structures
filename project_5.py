@@ -13,7 +13,7 @@ class Block:
     
     def calc_hash(self):
       sha = hashlib.sha256()
-      hash_str = json.dumps(self.__dict__, sort_keys=True).encode('utf-8')
+      hash_str = json.dumps(self.__dict__, sort_keys=True).encode('utf-8') #use self.__dict__ as hash_str
       sha.update(hash_str)
       return sha.hexdigest()
 
