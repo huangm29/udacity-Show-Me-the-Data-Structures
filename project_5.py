@@ -36,35 +36,68 @@ class Blockchain:
     
     def print_bc(self):
         if not self.head:
-            print( "Empty Blockchain！")
+            print( "Empty Blockchain！\n")
 
         else:
             current = self.head
             index = 0
-            print(f"Block {index}")
-            print(current)
             while current:
                 print(f"Block {index}")
                 print(current)
                 current = current.next
                 index += 1
 
-#test 1
-
+#Test 1 Normal case
+print("\n Test 1")
 bc = Blockchain()
-bc.print_bc()
 bc.add_block("data 1")
 bc.add_block("data 2")
 time.sleep(1)
 bc.add_block("data 3")
 bc.print_bc()
 
+#Test 1 output
 
-#test 2
+#Block 0
+#Timestamp: 1638503897.0707026
+#Data: data 1
+#Hash: dbd810b5cc496504c8ec603dfc1c110fbaa6b8a34ec83ea2a8b8b231483bdac3
+
+#Block 1
+#Timestamp: 1638503897.0707026
+#Data: data 2
+#Hash: 7fca40985e404b0ca101984a06fb3dda92984372ea4e47663c1321c51be1d8ed
+
+#Block 2
+#Timestamp: 1638503898.0842783
+#Data: data 3
+#Hash: 7e0fa1248a58bf19e1c90f4c3cfa30f4e4e805f00a441cb25c08e554b766d430
+
+#Test 2 Empty BlockChain
+print("\n Test 2")
+bc = Blockchain()
+bc.print_bc()
+#Test 2 output
+
+#Empty Blockchain！
+
+#Test 2 #Adding two blockchain with the exact same content
+print("\n Test 2")
 bc = Blockchain()
 bc.add_block("data 1")
 bc.add_block("data 1")
 bc.print_bc()
+#Test 3 output
+
+#Block 0
+#Timestamp: 1638503949.6751313
+#Data: data 1
+#Hash: 49bfa54d6bbcf0f173eef6c415513e70ce3ace84866e8d5bdcb5d90f069f3fdc
+
+#Block 1
+#Timestamp: 1638503949.6751313
+#Data: data 1
+#Hash: 13a154cac4d26033e1038b967f03f617265d35ca6c3b7894f10b147f7c365d4d
 
 
 

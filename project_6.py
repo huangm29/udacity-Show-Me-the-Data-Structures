@@ -45,7 +45,7 @@ def union(llist_1, llist_2):
     node1 = llist_1.head
     node2 = llist_2.head
     union_set = set()
-    while node1:
+    while node1: #Going through both Linkedlist separately, which is O(N+M)
         union_set.add(node1.value)
         node1 = node1.next
     while node2:
@@ -56,11 +56,10 @@ def union(llist_1, llist_2):
         unionLL.append(i)
     return unionLL
 
-def intersection(llist_1, llist_2):
-    # Your Solution Here
+def intersection(llist_1, llist_2): 
     node1 = llist_1.head
     intersection_set = set()
-    while node1:
+    while node1: #Going through both Linkedlist, which is O(N*M)
         if node1.value not in intersection_set:
             node2 = llist_2.head
             while node2:
@@ -74,7 +73,7 @@ def intersection(llist_1, llist_2):
         intersectionLL.append(i)
     return intersectionLL
 
-
+print("\n Test 1")
 # Test case 1
 
 linked_list_1 = LinkedList()
@@ -90,9 +89,11 @@ for i in element_2:
     linked_list_2.append(i)
 
 print (union(linked_list_1,linked_list_2))
+#32 -> 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 9 -> 11 -> 21 ->
 print (intersection(linked_list_1,linked_list_2))
+#4 -> 21 -> 6 ->
 
-
+print("\n Test 2")
 # Test case 2
 
 linked_list_3 = LinkedList()
@@ -108,4 +109,33 @@ for i in element_2:
     linked_list_4.append(i)
 
 print (union(linked_list_3,linked_list_4))
+#65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 7 -> 8 -> 9 -> 11 -> 21 -> 23 ->
 print (intersection(linked_list_3,linked_list_4))
+#
+
+print("\n Test 3")
+# Test case 3 Empty case
+linked_list_5 = LinkedList()
+linked_list_6 = LinkedList()
+
+print (union(linked_list_5,linked_list_6))
+#
+print (intersection(linked_list_5,linked_list_6))
+#
+
+print("\n Test 4")
+linked_list_7= LinkedList()
+linked_list_8 = LinkedList()
+
+element_7 = [3,1,4,1,5,9]
+
+for i in element_7:
+    linked_list_7.append(i)
+
+for i in element_7:
+    linked_list_8.append(i)
+
+print (union(linked_list_7,linked_list_8))
+#1 -> 3 -> 4 -> 5 -> 9 ->
+print (intersection(linked_list_7,linked_list_8))
+#1 -> 3 -> 4 -> 5 -> 9 ->
