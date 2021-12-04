@@ -110,11 +110,11 @@ print("\n Test 3 ")
 our_cache = LRU_Cache(0) #return "Warning: The capacity of LRU_Cache is invalid! The cache size is set to 0"
 our_cache.set(1,1)
 
-print(our_cache.get(1)) # returns -1 becasue the cache size is 0 
+print(our_cache.get(1)) # returns -1 because the cache size is 0 
 
 #Test 4
 print("\n Test 4 ")
 our_cache = LRU_Cache(-1) #return "Warning: The capacity of LRU_Cache is invalid! The cache size is set to 0"
 our_cache.set(1,1)
 
-print(our_cache.get(1)) # returns -1 becasue the cache size is negative
+print(our_cache.get(1)) # returns -1 because the cache size is negative
